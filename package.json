@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "clear": "ls | grep -v package.json | xargs rm -r",
+    "copy": "cp -r ../p-lc/packages/products/website/dist/* .",
+    "sync": "pnpm run clear && pnpm run copy",
+    "push": "git add -A && git commit --amend --no-edit && git push -f"
+  }
+}
